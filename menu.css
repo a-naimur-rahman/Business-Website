@@ -1,0 +1,129 @@
+/************************* Page Title Style *******************************/
+#pageTitle {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.pageTitle-text {
+    font-size: 2rem;
+    color: var(--black-1);
+}
+
+@media only screen and (min-width: 768px) {
+    #pageTitle {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    .pageTitle-text {
+        font-size: 3.6rem;
+    }
+}
+
+
+/******************************* Our Special Style *********************************/
+#ourSpecial {
+    padding: 0;
+}
+
+.ourSpecial-title {
+    font-size: 1.8rem;
+    color: var(--balck-1);
+    margin-bottom: 2rem;
+}
+
+.ourSpecial-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 400px;
+}
+
+.ourSpecial-item {
+    display: flex;
+    flex: 1;
+    background: var(--light-green-1);
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.ourSpecial-item-img,
+.ourSpecial-item-info {
+    flex: 1;
+}
+
+.ourSpecial-item-img {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.ourSpecial-item-img img {
+    object-fit: cover;
+}
+
+.ourSpecial-item-title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--black-1);
+    line-height: 2.2rem;
+}
+
+.ourSpecial-item-price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--green-1);
+    margin-bottom: 1rem;
+}
+
+.ourSpecial-item-stars {
+    width: max-content;
+}
+
+@media only screen and (min-width: 768px) {
+    .ourSpecial-title {
+        font-size: 2.4rem;
+    }
+
+    .ourSpecial-wrapper {
+        flex-direction: row;
+        gap: 2rem;
+        max-width: none;
+    }
+
+    .ourSpecial-item {
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+
+    .ourSpecial-item-title {
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ourSpecial-item-price {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ourSpecial-item-img {
+        flex: 4;
+    }
+
+    .ourSpecial-item-info {
+        flex: 3;
+    }
+}
+
+/*************************** Dish Grid Style *****************************/
+#dishGrid {
+    padding-bottom: 0;
+}
+
+#dishGrid:last-of-type {
+    padding-bottom: 10rem;
+}

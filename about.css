@@ -1,0 +1,94 @@
+/******************************* Our Story Style *********************************/
+.ourStory-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ourStory-title,            /*** Our Goals Style ***/
+.ourGoals-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--black-1);
+    margin-bottom: 1rem;
+}
+
+.ourStory-subtitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--black-1);
+    margin-bottom: 2rem;
+}
+
+.ourStory-text,             /*** Our Goals Style ***/
+.ourGoals-text {
+    font-size: 1.4rem;
+    line-height: 1.4em;
+    color: var(--balck-2);
+}
+
+@media only screen and (min-width: 768px) {
+    .ourStory-wrapper {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .ourStory-img,          
+    .ourStory-info {
+        flex: 1;
+    }
+
+    .ourStory-title,            /*** Our Goals Style ***/
+    .ourGoals-title {
+        font-size: 3.6rem;
+    }
+
+    .ourStory-subtitle {
+        font-size: 1.8rem;
+    }
+
+    .ourStory-text,             /*** Our Goals Style ***/
+    .ourGoals-text {
+        font-size: 1.8rem;
+        max-width: 800px;
+    }
+}
+
+
+/*************************** Our Goals Style ******************************/
+/*** Some Our Goals Style are Included in Our Story Style ***/
+.ourGoals-info {
+    text-align: left;
+    margin-bottom: 5rem;
+}
+
+.ourGoals-img-wrapper img {
+    object-fit: cover;
+}
+
+.ourGoals-img-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.ourGoals-img1 {
+    grid-row: 1/3;
+}
+
+@media only screen and (min-width: 768px) {
+    .ourGoals-info {
+        text-align: center;
+    }
+
+    .ourGoals-img-wrapper {
+        gap: 2rem;
+    }
+
+    .ourGoals-text {
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,478 @@
+/**************************** Nav Styles ****************************/
+.nav {
+    padding: 2rem 0;
+}
+
+.nav-icon,
+.nav-close,
+.nav-bgOverlay {
+    display: none;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.nav-list .nav-link {
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--black-2);
+    padding: 0.5rem;
+}
+
+.nav-list li:hover .nav-link {
+    color: var(--green-1);
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        position: relative;
+    }
+
+    .nav-icon {
+        display: block;
+    }
+
+    .nav-icon svg,
+    .nav-close svg {
+        pointer-events: none;
+        height: 30px;
+        width: 30px;
+    }
+
+    .nav-close {
+        display: block;
+        position: absolute;
+        color: var(--black-1);
+        right: 1rem;
+        top: 1rem;
+        cursor: pointer;
+    }
+
+    .nav-list {
+        z-index: 1000;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: 100vh;
+        width: 80%;
+        background: var(--light-green-1);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 2rem;
+        transform: translateX(0%);
+        overflow: hidden;
+        transition: 0.3s ease-in transform;
+    }
+
+    .nav-list.show {
+        transform: translateX(-100%);
+    }
+
+    .nav-list li {
+        display: block;
+        text-align: right;
+        margin-bottom: 2rem;
+    }
+
+    .nav-list a {
+        font-size: 1.6rem;
+    }
+
+    .nav-bgOverlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        height: 100vh;
+        width: 100%;
+        background: rgba(18, 24, 14, 0.8);
+        display: none;
+    }
+
+    .nav-bgOverlay.active {
+        display: block;
+    }
+}
+
+/****************************Global Button Style**************************/
+.btn {
+    color: var(--green-1);
+    font-family: Poppins;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    padding: 1.2rem 2rem;
+}
+
+.primary-btn {
+    color: var(--white-1);
+    background: var(--green-1);
+}
+
+@media only screen and (min-width: 768px) {
+    .btn {
+        padding: 1.3rem 2rem;
+        font-size: 2rem;
+    }
+}
+
+/***************************** Footer Style ***************************/
+footer {
+    background: var(--light-green-1);
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 2rem;
+}
+
+.footer-desc {
+    font-size: 1.4rem;
+    color: var(--black-2);
+    margin-bottom: 2rem;
+}
+
+.footer-social-title {
+    font-size: 1.8rem;
+    color: var(--black-1);
+    margin-bottom: 1rem;
+}
+
+.footer-social li {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.footer-social a {
+    padding: 0.5rem 0.8rem;
+    background-color: var(--white-1);
+    border: 1px solid var(--light-green-1);
+    border-radius: 8px;
+}
+
+.footer-social svg {
+    width: 20px;
+    color:  var(--black-1);
+}
+
+.footer-text-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--black-1);
+    font-weight: 600;
+}
+
+.footer-text a {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--black-2);
+    font-family: Raleway;
+    font-weight: 500;
+    line-height: 1.4rem;
+}
+
+@media only screen and (min-width: 768px) {
+    footer {
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+    }
+
+    .footer-wrapper {
+        flex-direction: row;
+    }
+
+    .footer-col1 {
+        flex: 4;
+    }
+
+    .footer-col2,
+    .footer-col3,
+    .footer-col4 {
+        flex: 2;
+    }
+
+    .footer-desc {
+        max-width: 300px;
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .footer-social-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-text-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-text a {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+}
+
+#copyright {
+    padding: 1rem 0;
+}
+
+.copyright-text {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .copyright-text {
+        font-size: 1.6rem;
+    }
+}
+
+/************************** Store Info Style ****************************/
+.storeInfo-wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.storeInfo-item {
+    background-color: var(--light-green-1);
+    padding: 20px 30px;
+    text-align: center;
+    border-radius: 12px;
+    width: 150px;
+}
+
+.storeInfo-icon {
+    width: 30px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+.storeInfo-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: Poppins;
+    margin-bottom: 0.5rem;
+    color: var(--black-1);
+}
+
+.storeInfo-text {
+    font-size: 1.4rem;
+    font-family: Raleway;
+    color: var(--black-2);
+}
+
+@media only screen and (min-width: 768px) {
+    .storeInfo-wrapper {
+        gap: 2rem;
+    }
+
+    .storeInfo-item {
+        min-width: 200px;
+        padding: 40px 0;
+    }
+
+    .storeInfo-icon {
+        width: 47px;
+        margin-bottom: 2.5rem;
+    }
+
+    .storeInfo-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-text {
+        font-size: 1.4rem;
+    }
+}
+
+
+/*************************** DishGrid Styles ******************************/
+.dishGrid-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: var(--black-1);
+}
+
+.dishGrid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.dishGrid-item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-green-1);
+    padding: 0.5rem;
+    gap: 0.5rem;
+    border-radius: 8px;
+}
+
+.dishGrid-item-img {
+    flex: 4;
+}
+
+.dishGrid-item-info {
+    flex: 5;
+}
+
+.dishGrid-item-img img {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.dishGrid-item-title {
+    font-size: 1.4rem;
+    line-height: 2.0rem;
+    font-weight: 500;
+    color: var(--black-1);
+    margin-bottom: 0.5rem;
+}
+
+.dishGrid-item-price {
+    font-size: 1.2rem;
+    color: var(--green-1);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.dishGrid-item-stars {
+    max-height: 15px;
+    width: max-content;
+}
+
+@media only screen and (min-width: 768px) {
+    .dishGrid-title {
+        font-size: 2.2rem;
+    }
+
+    .dishGrid-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 3rem;
+    }
+
+    .dishGrid-item {
+        flex-direction: row;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .dishGrid-item-title {
+        font-size: 2.4rem;
+        line-height: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .dishGrid-item-price {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+
+/*************************** Form Style ****************************/
+#form {
+    padding: 5rem 0;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--black-1);
+}
+
+.form-wrapper {
+    padding: 3rem 0;
+}
+
+.form-wrapper form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.form-group label {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--black-2);
+    font-family: Poppins;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: Raleway;
+    width: 100%;
+    border: none;
+    background: var(--light-green-1);
+    padding: 1.4rem;
+    border-radius: 8px;
+    margin-top: .5rem;
+    color: var(--black-2);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-wrapper button[type='submit'] {
+    width: max-content;
+    border: none;
+    padding: 1rem 4rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .form-title {
+        font-size: 3.6rem;
+    }
+
+    .form-wrapper {
+        padding: 5rem 0;
+    }
+
+    .form-wrapper form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-group-full {
+        grid-column: 1/3;
+    }
+
+    .form-group label {
+        font-size: 1.8rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 1.8rem;
+        padding: 1.8rem;
+        margin-top: 1.5rem;
+    }
+}
